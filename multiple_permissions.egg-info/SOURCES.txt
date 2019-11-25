@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+multiple_permissions/__init__.py
+multiple_permissions/middlewares.py
+multiple_permissions/permissions.py
+multiple_permissions/tests.py
+multiple_permissions.egg-info/PKG-INFO
+multiple_permissions.egg-info/SOURCES.txt
+multiple_permissions.egg-info/dependency_links.txt
+multiple_permissions.egg-info/top_level.txt
