@@ -31,5 +31,3 @@ class PermissionMiddleware:
                 # check if there is any matching condition
                 if not any(conditions):
                     raise PermissionDenied
-                return True
-        return True
