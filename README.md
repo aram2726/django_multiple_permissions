@@ -1,6 +1,9 @@
 Django multiple permissions
 ===========================
 
+[![Python](https://img.shields.io/pypi/pyversions/multiple-permissions)](https://img.shields.io/pypi/pyversions/multiple-permissions)
+[![License](https://img.shields.io/github/license/aram2726/django_multiple_permissions)](https://img.shields.io/github/license/aram2726/django_multiple_permissions)
+
 Usage
 ------
 
