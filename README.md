@@ -54,13 +54,13 @@ class PollsCreateView(CreateView):
 
 * create new file in your apps named `permissions.py` and write the followng code
 
-* **note that your user should have `is_moderator` attribute or model field otherwise you'll catch AttributeError**
+* **note that your user should have `is_manager` attribute or model field otherwise you'll catch AttributeError**
 
 ```python
 from multiple_permissions.permissions import BasePermission
 
 
-class IsModerator(BasePermission):
+class IsManager(BasePermission):
     def has_permission(self, request, view=None):
         if request.user.is_authenticated and request.user.is_active and request.user.is_manager:
             return True
