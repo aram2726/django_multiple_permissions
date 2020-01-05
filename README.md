@@ -41,12 +41,12 @@ from multiple_permissions.permissions import IsAuthenticated, IsSuperuser, IsMan
 
 
 class PollsListView(ListView):
-    permission_classes = (IsAuthenticated,)
+    multiple_permissions = (IsAuthenticated,)
     ...
 
 
 class PollsCreateView(CreateView):
-    permission_classes = (IsSuperuser, IsManager)
+    multiple_permissions = (IsSuperuser, IsManager)
     ...
 ```
 

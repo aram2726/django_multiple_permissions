@@ -20,9 +20,9 @@ class PermissionMiddleware:
     @staticmethod
     def process_view(request, view_func, view_args, view_kwargs):
         if getattr(view_func, "view_class", None):
-            if getattr(view_func.view_class, "permission_classes", None):
+            if getattr(view_func.view_class, "multiple_permissions", None):
                 # assign permission_classes attribute of view class to permission_classes variable
-                permission_classes = view_func.view_class.permission_classes
+                permission_classes = view_func.view_class.multiple_permissions
                 conditions = []
                 # loop through permission_classes
                 for permission_class in permission_classes:

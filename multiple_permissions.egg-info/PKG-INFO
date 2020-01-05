@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: multiple-permissions
-Version: 0.1.6
+Version: 0.1.7
 Summary: Use multiple permission classes in django class based views.
 Home-page: https://github.com/aram2726/django_multiple_permissions
 Author: Aram Haroyan
@@ -49,12 +49,12 @@ Description: Django multiple permissions
         
         
         class PollsListView(ListView):
-            permission_classes = (IsAuthenticated,)
+            multiple_permissions = (IsAuthenticated,)
             ...
         
         
         class PollsCreateView(CreateView):
-            permission_classes = (IsSuperuser, IsManager)
+            multiple_permissions = (IsSuperuser, IsManager)
             ...
         ```
         
@@ -62,13 +62,13 @@ Description: Django multiple permissions
         
         * create new file in your apps named `permissions.py` and write the followng code
         
-        * **note that your user should have `is_moderator` attribute or model field otherwise you'll catch AttributeError**
+        * **note that your user should have `is_manager` attribute or model field otherwise you'll catch AttributeError**
         
         ```python
         from multiple_permissions.permissions import BasePermission
         
         
-        class IsModerator(BasePermission):
+        class IsManager(BasePermission):
             def has_permission(self, request, view=None):
                 if request.user.is_authenticated and request.user.is_active and request.user.is_manager:
                     return True
