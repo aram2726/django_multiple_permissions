@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: multiple-permissions
-Version: 0.1.7
+Version: 0.1.9
 Summary: Use multiple permission classes in django class based views.
 Home-page: https://github.com/aram2726/django_multiple_permissions
 Author: Aram Haroyan
@@ -15,13 +15,13 @@ Description: Django multiple permissions
         Usage
         ------
         
-        * install package
+        * Install the package.
         
         ```shell script
         $ pip install multiple-permissions
         ```
         
-        * add apps.core to installed apps
+        * Add `multiple_permissions` to installed apps.
         
         ```python
         INSTALLED_APPS = [
@@ -31,7 +31,7 @@ Description: Django multiple permissions
         ]
         ```
         
-        * add apps.core.middlewares to MIDDLEWARE list
+        * Add `PermissionMiddleware` to MIDDLEWARE list.
         
         ```python
         MIDDLEWARE = [
@@ -40,7 +40,7 @@ Description: Django multiple permissions
         ]
         ```
         
-        * Add "permission_classes" attribute to view classes
+        * Set `permission_classes` attribute to view classes.
         
         ```python
         from django.views.generic import ListView, CreateView
@@ -76,11 +76,12 @@ Description: Django multiple permissions
         
         ```
         
-Keywords: django multiple permissions many permission python rest framework
+Keywords: django multiple permissions use many permission python rest framework
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
 Classifier: Framework :: Django
-Classifier: Framework :: Django :: 2.0
+Classifier: Framework :: Django :: 2.*
+Classifier: Framework :: Django :: 3.*
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
