@@ -7,13 +7,13 @@ Django multiple permissions
 Usage
 ------
 
-* install package
+* Install the package.
 
 ```shell script
 $ pip install multiple-permissions
 ```
 
-* add apps.core to installed apps
+* Add `multiple_permissions` to installed apps.
 
 ```python
 INSTALLED_APPS = [
@@ -23,7 +23,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-* add apps.core.middlewares to MIDDLEWARE list
+* Add `PermissionMiddleware` to MIDDLEWARE list.
 
 ```python
 MIDDLEWARE = [
@@ -32,7 +32,7 @@ MIDDLEWARE = [
 ]
 ```
 
-* Add "permission_classes" attribute to view classes
+* Set `permission_classes` attribute to view classes.
 
 ```python
 from django.views.generic import ListView, CreateView
