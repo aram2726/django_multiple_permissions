@@ -80,8 +80,6 @@ Keywords: django multiple permissions use many permission python rest framework
 Platform: UNKNOWN
 Classifier: Environment :: Web Environment
 Classifier: Framework :: Django
-Classifier: Framework :: Django :: 2.*
-Classifier: Framework :: Django :: 3.*
 Classifier: Intended Audience :: Developers
 Classifier: License :: OSI Approved :: MIT License
 Classifier: Operating System :: OS Independent
