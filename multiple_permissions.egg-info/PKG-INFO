@@ -41,6 +41,7 @@ Description: Django multiple permissions
         ```
         
         * Set `permission_classes` attribute to view classes.
+        * Set `exception_class` attribute to view classes.
         
         ```python
         from django.views.generic import ListView, CreateView
@@ -50,11 +51,13 @@ Description: Django multiple permissions
         
         class PollsListView(ListView):
             multiple_permissions = (IsAuthenticated,)
+            # if exception_class is missing will raise django.core.exceptions.PermissionDenied
             ...
         
         
         class PollsCreateView(CreateView):
             multiple_permissions = (IsSuperuser, IsManager)
+            exception_class = PermissionError
             ...
         ```
         

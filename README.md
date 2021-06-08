@@ -33,6 +33,7 @@ MIDDLEWARE = [
 ```
 
 * Set `permission_classes` attribute to view classes.
+* Set `exception_class` attribute to view classes.
 
 ```python
 from django.views.generic import ListView, CreateView
@@ -42,11 +43,13 @@ from multiple_permissions.permissions import IsAuthenticated, IsSuperuser, IsMan
 
 class PollsListView(ListView):
     multiple_permissions = (IsAuthenticated,)
+    # if exception_class is missing will raise django.core.exceptions.PermissionDenied
     ...
 
 
 class PollsCreateView(CreateView):
     multiple_permissions = (IsSuperuser, IsManager)
+    exception_class = PermissionError
     ...
 ```
 

@@ -31,4 +31,7 @@ class PermissionMiddleware:
                     conditions.append(permission_class().has_permission(request))
                 # Check if there is any matching condition.
                 if not any(conditions):
+                    exc = getattr(view_func.view_class, "exception_class", None)
+                    if exc and issubclass(exc, Exception):
+                        raise exc
                     raise PermissionDenied
